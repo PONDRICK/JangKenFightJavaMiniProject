@@ -27,6 +27,7 @@ public class WinLosePanel extends javax.swing.JFrame {
         jPanel1 = new Panel2.PanelGambar2();
         Textresult = new javax.swing.JLabel();
         Lpreminder = new javax.swing.JLabel();
+        Playbtn = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("JangKenFight");
@@ -46,6 +47,14 @@ public class WinLosePanel extends javax.swing.JFrame {
         Lpreminder.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Lpreminder.setText("Lifepoint : 3");
 
+        Playbtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projectgame/Layer 1.png"))); // NOI18N
+        Playbtn.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Playbtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                PlaybtnMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -57,7 +66,11 @@ public class WinLosePanel extends javax.swing.JFrame {
                         .addComponent(Textresult, javax.swing.GroupLayout.PREFERRED_SIZE, 343, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(342, 342, 342)
-                        .addComponent(Lpreminder, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Lpreminder, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(17, 17, 17)
+                                .addComponent(Playbtn)))))
                 .addContainerGap(330, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -67,7 +80,9 @@ public class WinLosePanel extends javax.swing.JFrame {
                 .addComponent(Textresult, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(Lpreminder, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(276, 276, 276))
+                .addGap(18, 18, 18)
+                .addComponent(Playbtn)
+                .addGap(195, 195, 195))
         );
 
         getContentPane().add(jPanel1);
@@ -76,9 +91,15 @@ public class WinLosePanel extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-
+    private void PlaybtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PlaybtnMouseClicked
+        dispose();//ปิดหน้าเริ่มเกมส์
+        new Battleship.Game();
+        
+    }//GEN-LAST:event_PlaybtnMouseClicked
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JLabel Lpreminder;
+    private javax.swing.JLabel Playbtn;
     public javax.swing.JLabel Textresult;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
