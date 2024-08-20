@@ -1,4 +1,4 @@
-# JangKenFlightJavaMiniProject
+# JangKenFightJavaMiniProject
 MiniProject Java with netbean (Software Construction)
 
 # GameStart User Input your Name
