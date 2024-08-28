@@ -10,3 +10,10 @@ MiniProject Java with netbean (Software Construction)
 
 # Result of Fight
 ![image](https://github.com/Trainii1150/JangKenFlightJavaMiniProject/assets/107059428/c8ecb836-be7c-470d-9906-612a8dde4927)
+
+## Contributors
+
+This project was made possible with contributions from:
+
+- [PONDRICK](https://github.com/PONDRICK)
+- [Trainii1150](https://github.com/Trainii1150)
